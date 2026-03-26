@@ -1,0 +1,242 @@
+_dataset:
+  class: Shin2017A
+  code: Shin2017A
+  doi: 10.1109/TNSRE.2016.2628057
+  interval:
+  - 0
+  - 10
+  n_subjects: 29
+  paradigm: imagery
+abstract: We provide an open access dataset for hybrid brain-computer interfaces (BCIs) using electroencephalography (EEG)
+  and near-infrared spectroscopy (NIRS). For this, we conducted two BCI experiments (left versus right hand motor imagery;
+  mental arithmetic versus resting state). The dataset was validated using baseline signal analysis methods, with which classification
+  performance was evaluated for each modality and a combination of both modalities. As already shown in previous literature,
+  the capability of discriminating different mental states can be enhanced by using a hybrid approach, when comparing to single
+  modality analyses. This makes the provided data highly suitable for hybrid BCI investigations. Since our open access dataset
+  also comprises motion artifacts and physiological data, we expect that it can be used in a wide range of future validation
+  approaches in multimodal BCI research.
+acquisition:
+  auxiliary_channels:
+    eog_channels: 4
+    eog_type:
+    - horizontal
+    - vertical
+    has_eog: true
+    other_physiological:
+    - ecg
+    - respiration
+  cap_manufacturer: EASYCAP GmbH
+  cap_model: custom-made stretchy fabric cap
+  channel_types:
+    eeg: 30
+    eog: 2
+  ground: Fz
+  hardware: BrainAmp
+  line_freq: 50.0
+  montage: 10-5
+  n_channels: 30
+  reference: linked mastoids
+  sampling_rate: 200.0
+  sensor_type: active electrodes
+  sensors:
+  - AFF1h
+  - AFF2h
+  - AFF5h
+  - AFF6h
+  - AFp1
+  - AFp2
+  - CCP3h
+  - CCP4h
+  - CCP5h
+  - CCP6h
+  - Cz
+  - F3
+  - F4
+  - F7
+  - F8
+  - FCC3h
+  - FCC4h
+  - FCC5h
+  - FCC6h
+  - HEOG
+  - P3
+  - P4
+  - P7
+  - P8
+  - POO1
+  - POO2
+  - PPO1h
+  - PPO2h
+  - Pz
+  - T7
+  - T8
+  - VEOG
+bci_application:
+  applications:
+  - motor_control
+  environment: laboratory
+cross_validation:
+  cv_folds: 5
+  cv_method: 10x5-fold
+  evaluation_type:
+  - within_subject
+data_processed: true
+data_structure:
+  n_blocks: 10
+  n_trials:
+    per_class_per_session: 10
+    per_session: 20
+    total_per_class: 30
+  trials_context: 10 blocks per session, each block containing 2 trials (one left, one right hand MI) randomized
+documentation:
+  contact_info:
+  - h2j@kumoh.ac.kr
+  - klaus-robert.mueller@tuberlin.de
+  country: DE
+  data_url: http://doc.ml.tu-berlin.de/hBCI
+  description: 'Open access dataset for hybrid brain-computer interfaces (BCIs) using electroencephalography (EEG) and near-infrared
+    spectroscopy (NIRS). Dataset includes two BCI experiments: left versus right hand motor imagery, and mental arithmetic
+    versus resting state.'
+  doi: 10.1109/TNSRE.2016.2628057
+  ethics_approval:
+  - 'Ethics Committee of the Institute of Psychology and Ergonomics, Technical University of Berlin (approval number: SH_01_20150330)'
+  - Declaration of Helsinki
+  funding:
+  - Basic Science Research Program through the National Research Foundation of Korea (NRF) funded by the Ministry of Education
+    (NRF2014R1A6A3A03057524)
+  - Ministry of Science, ICT & Future Planning (NRF-2015R1C1A1A02037032)
+  - Brain Korea 21 PLUS Program through the NRF funded by the Ministry of Education
+  - Korea University Grant
+  - 'BMBF (#01GQ0850, Bernstein Focus: Neurotechnology)'
+  institution: Berlin Institute of Technology
+  institution_address: 10587 Berlin, Germany
+  institution_department: Machine Learning Group, Department of Computer Science
+  investigators:
+  - Jaeyoung Shin
+  - Alexander von Lühmann
+  - Benjamin Blankertz
+  - Do-Won Kim
+  - Jichai Jeong
+  - Han-Jeong Hwang
+  - Klaus-Robert Müller
+  keywords:
+  - Brain-computer interface (BCI)
+  - electroencephalography (EEG)
+  - hybrid BCI
+  - mental arithmetic
+  - motor imagery
+  - near-infrared spectroscopy (NIRS)
+  - open access dataset
+  license: GPL-3.0
+  publication_year: 2017
+  repository: GitHub
+  senior_author: Klaus-Robert Müller
+experiment:
+  class_labels:
+  - left_hand
+  - right_hand
+  events:
+    left_hand: 1
+    right_hand: 2
+  feedback_type: none
+  hed_tags:
+    left_hand: (Sensory-event, Experimental-stimulus, Visual-presentation, (Leftward, Arrow)), (Agent-action, (Imagine, Move,
+      (Left, Hand)))
+    right_hand: (Sensory-event, Experimental-stimulus, Visual-presentation, (Rightward, Arrow)), (Agent-action, (Imagine,
+      Move, (Right, Hand)))
+  instructions: Subjects were instructed to perform kinesthetic MI (i.e., to imagine the opening and closing their hands as
+    they were grabbing a ball) to ensure that actual MI, not visual MI, was performed. Subjects were asked to imagine hand
+    gripping (opening and closing their hands) with a 1 Hz pace.
+  mode: offline
+  n_classes: 2
+  paradigm: imagery
+  primary_modality: visual
+  stimulus_modalities:
+  - visual
+  - auditory
+  stimulus_type: visual arrow and fixation cross
+  study_design: 'Dataset A: left vs right hand motor imagery (kinesthetic imagery of opening and closing hands)'
+  synchronicity: cued
+  trial_duration: 10.0
+file_format: MATLAB
+methodology: Twenty-nine right-handed and one left-handed healthy subjects participated in motor imagery and mental arithmetic
+  tasks. EEG data was recorded at 1000 Hz using 30 active electrodes with a BrainAmp amplifier, referenced to linked mastoids.
+  NIRS data was collected at 12.5 Hz using NIRScout with 14 sources and 16 detectors resulting in 36 channels. Three sessions
+  were conducted for each paradigm (MI and MA). Each session included 20 trials with 10s task periods and 15-17s rest periods.
+  For MI, subjects performed kinesthetic hand gripping imagery at 1 Hz pace. Visual instructions included arrows for MI and
+  arithmetic problems for MA. Motion artifacts from eye/head movements were also recorded. Signal processing included CSP
+  for spatial filtering, log-variance features, and shrinkage LDA classifier with 10x5-fold cross-validation.
+paradigm_specific:
+  cue_duration_s: 2.0
+  detected_paradigm: motor_imagery
+  imagery_duration_s: 10.0
+  imagery_tasks:
+  - left_hand
+  - right_hand
+  n_repetitions: 20
+participants:
+  age_mean: 28.5
+  age_std: 3.7
+  bci_experience: naive to MI experiment
+  gender:
+    female: 15
+    male: 14
+  handedness:
+    left: 1
+    right: 29
+  health_status: healthy
+  n_subjects: 29
+  species: human
+performance:
+  EEG+HbR+HbO_accuracy: 74.2
+  EEG_accuracy: 65.6
+  HbO_accuracy: 63.5
+  HbR_accuracy: 66.5
+  accuracy_percent: 65.6
+preprocessing:
+  artifact_methods:
+  - ICA
+  - EOG rejection
+  bandpass:
+  - 0.5
+  - 50.0
+  data_state: preprocessed
+  downsampled_to_hz: 200.0
+  filter_order: 4
+  filter_type: Chebyshev type II
+  highpass_hz: 0.5
+  lowpass_hz: 50.0
+  preprocessing_applied: true
+  preprocessing_steps:
+  - common average reference
+  - bandpass filtering (0.5-50 Hz)
+  - ICA-based EOG rejection
+  - downsampling to 200 Hz
+  re_reference: car
+runs_per_session: 1
+sessions_per_subject: 3
+signal_processing:
+  classifiers:
+  - Shrinkage LDA
+  feature_extraction:
+  - CSP
+  - log-variance
+  frequency_bands:
+    analyzed_range:
+    - 8.0
+    - 25.0
+    beta:
+    - 12.0
+    - 25.0
+    mu:
+    - 8.0
+    - 12.0
+  spatial_filters:
+  - CSP
+tags:
+  modality:
+  - Motor
+  pathology:
+  - Healthy
+  type:
+  - Imagery

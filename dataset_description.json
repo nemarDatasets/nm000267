@@ -27,7 +27,7 @@
   "ReferencesAndLinks": [
     "http://doc.ml.tu-berlin.de/hBCI"
   ],
-  "DatasetDOI": "doi:10.1109/TNSRE.2016.2628057",
+  "DatasetDOI": "10.82901/nemar.nm000267",
   "GeneratedBy": [
     {
       "CodeURL": "https://github.com/NeuroTechX/moabb",
@@ -40,6 +40,9 @@
     {
       "DOI": "10.1109/TNSRE.2016.2628057",
       "URL": "http://doc.ml.tu-berlin.de/hBCI"
+    },
+    {
+      "DOI": "doi:10.1109/TNSRE.2016.2628057"
     }
   ],
   "Keywords": [

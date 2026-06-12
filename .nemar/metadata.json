@@ -1,0 +1,109 @@
+{
+  "version": "2.0",
+  "pipeline_stage": "validated",
+  "authors": {
+    "Jaeyoung Shin": {},
+    "Alexander von Lühmann": {},
+    "Benjamin Blankertz": {},
+    "Do-Won Kim": {},
+    "Jichai Jeong": {},
+    "Han-Jeong Hwang": {},
+    "Klaus-Robert Müller": {}
+  },
+  "related_identifiers": [
+    {
+      "identifier": "10.1109/TNSRE.2016.2628057",
+      "identifier_type": "DOI",
+      "relation_type": "IsDerivedFrom"
+    },
+    {
+      "identifier": "https://github.com/nemarDatasets/nm000267",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "https://nemar.org/dataexplorer/detail?dataset_id=nm000267",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    }
+  ],
+  "funding_references": [
+    {
+      "funder_name": "Brain Korea 21 PLUS Program through the NRF funded by the Ministry of Education"
+    },
+    {
+      "funder_name": "Korea University Grant"
+    },
+    {
+      "funder_name": "National Research Foundation of Korea",
+      "award_number": "NRF2014R1A6A3A03057524",
+      "award_title": "Basic Science Research Program through the National Research Foundation of Korea funded by the Ministry of Education"
+    },
+    {
+      "funder_name": "National Research Foundation of Korea",
+      "award_number": "NRF-2015R1C1A1A02037032",
+      "award_title": "Ministry of Science, ICT & Future Planning"
+    },
+    {
+      "funder_name": "National Research Foundation of Korea",
+      "award_title": "Brain Korea 21 PLUS Program through the NRF funded by the Ministry of Education"
+    },
+    {
+      "funder_name": "Korea University"
+    },
+    {
+      "funder_name": "BMBF",
+      "award_number": "01GQ0850",
+      "award_title": "Bernstein Focus: Neurotechnology"
+    }
+  ],
+  "title": "Shin et al. 2017 (Experiment A) — Open Access Dataset for EEG+NIRS Single-Trial Classification",
+  "license": "GPL-3.0",
+  "dataset_type": "derivative",
+  "resource_type_general": "Dataset",
+  "modalities": [
+    "eeg"
+  ],
+  "resource_type_specific": "EEG Dataset",
+  "sizes": [
+    "2.0 GB (175 files)"
+  ],
+  "formats": [
+    ".bdf",
+    ".json",
+    ".md",
+    ".tsv",
+    ".yaml",
+    ".yml"
+  ],
+  "description": "An open-access hybrid brain-computer interface dataset combining electroencephalography (EEG) and near-infrared spectroscopy (NIRS) recordings from 29 healthy subjects performing motor imagery and mental arithmetic tasks. The dataset includes preprocessed EEG data (30 channels, 200 Hz sampling) and NIRS data with validated classification performance demonstrating enhanced discrimination of mental states through multimodal analysis compared to single-modality approaches.",
+  "methods_description": "EEG data were recorded at 1000 Hz using 30 active electrodes with a BrainAmp amplifier, referenced to linked mastoids, and downsampled to 200 Hz. NIRS data were collected at 12.5 Hz using NIRScout with 14 sources and 16 detectors (36 channels). Preprocessing included common average reference, bandpass filtering (0.5-50 Hz, Chebyshev type II, order 4), ICA-based EOG rejection, and artifact removal. Feature extraction employed Common Spatial Patterns (CSP) with log-variance features, classified using shrinkage Linear Discriminant Analysis with 10×5-fold cross-validation.",
+  "keywords": [
+    {
+      "term": "Brain-Computer Interfaces",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D062207"
+    },
+    {
+      "term": "Electroencephalography",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
+    },
+    {
+      "term": "Near-Infrared Spectroscopy"
+    },
+    {
+      "term": "motor imagery"
+    },
+    {
+      "term": "hybrid BCI"
+    },
+    {
+      "term": "mental arithmetic"
+    },
+    {
+      "term": "multimodal neuroimaging"
+    }
+  ],
+  "source_hash": "62037e5c8c96945a32569fa50211fee121e68f8cffa3a7f5717b8c90ea33c832"
+}

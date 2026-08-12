@@ -1,6 +1,11 @@
 {
   "version": "2.0",
   "pipeline_stage": "validated",
+  "title": "Shin et al. 2017 (Experiment A) — Open Access Dataset for EEG+NIRS Single-Trial Classification",
+  "description": "An open access hybrid brain-computer interface dataset combining electroencephalography (EEG) and near-infrared spectroscopy (NIRS) recordings from 29 healthy subjects performing motor imagery and mental arithmetic tasks. The dataset includes preprocessed EEG data (30 channels, 200 Hz sampling rate) and NIRS data across multiple sessions, with validated classification performance demonstrating enhanced discrimination of mental states through multimodal analysis compared to single modality approaches.",
+  "methods_description": "EEG data were recorded at 1000 Hz using 30 active electrodes with a BrainAmp amplifier, referenced to linked mastoids, and downsampled to 200 Hz. NIRS data were collected at 12.5 Hz using NIRScout with 14 sources and 16 detectors (36 channels). Preprocessing included common average reference, bandpass filtering (0.5-50 Hz, Chebyshev type II, order 4), ICA-based EOG rejection, and artifact removal. Feature extraction employed Common Spatial Patterns (CSP) with log-variance features, classified using Shrinkage LDA with 10×5-fold cross-validation. Motor imagery tasks involved kinesthetic hand gripping at 1 Hz pace cued by visual arrows.",
+  "license": "GPL-3.0",
+  "dataset_type": "derivative",
   "authors": {
     "Jaeyoung Shin": {},
     "Alexander von Lühmann": {},
@@ -10,6 +15,33 @@
     "Han-Jeong Hwang": {},
     "Klaus-Robert Müller": {}
   },
+  "keywords": [
+    {
+      "term": "Brain-Computer Interfaces",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D062207"
+    },
+    {
+      "term": "Electroencephalography",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
+    },
+    {
+      "term": "motor imagery"
+    },
+    {
+      "term": "near-infrared spectroscopy"
+    },
+    {
+      "term": "hybrid BCI"
+    },
+    {
+      "term": "mental arithmetic"
+    },
+    {
+      "term": "multimodal neuroimaging"
+    }
+  ],
   "related_identifiers": [
     {
       "identifier": "10.1109/TNSRE.2016.2628057",
@@ -22,7 +54,7 @@
       "relation_type": "IsDescribedBy"
     },
     {
-      "identifier": "https://nemar.org/dataexplorer/detail?dataset_id=nm000267",
+      "identifier": "https://nemar.org/dataset/nm000267",
       "identifier_type": "URL",
       "relation_type": "IsDescribedBy"
     }
@@ -37,7 +69,7 @@
     {
       "funder_name": "National Research Foundation of Korea",
       "award_number": "NRF2014R1A6A3A03057524",
-      "award_title": "Basic Science Research Program through the National Research Foundation of Korea funded by the Ministry of Education"
+      "award_title": "Basic Science Research Program"
     },
     {
       "funder_name": "National Research Foundation of Korea",
@@ -46,7 +78,7 @@
     },
     {
       "funder_name": "National Research Foundation of Korea",
-      "award_title": "Brain Korea 21 PLUS Program through the NRF funded by the Ministry of Education"
+      "award_title": "Brain Korea 21 PLUS Program"
     },
     {
       "funder_name": "Korea University"
@@ -57,53 +89,22 @@
       "award_title": "Bernstein Focus: Neurotechnology"
     }
   ],
-  "title": "Shin et al. 2017 (Experiment A) — Open Access Dataset for EEG+NIRS Single-Trial Classification",
-  "license": "GPL-3.0",
-  "dataset_type": "derivative",
   "resource_type_general": "Dataset",
+  "resource_type_specific": "EEG Dataset",
   "modalities": [
     "eeg"
   ],
-  "resource_type_specific": "EEG Dataset",
   "sizes": [
-    "2.0 GB (175 files)"
+    "7.0 GB (204 files)"
   ],
   "formats": [
     ".bdf",
     ".json",
+    ".mat",
     ".md",
     ".tsv",
     ".yaml",
     ".yml"
   ],
-  "description": "An open-access hybrid brain-computer interface dataset combining electroencephalography (EEG) and near-infrared spectroscopy (NIRS) recordings from 29 healthy subjects performing motor imagery and mental arithmetic tasks. The dataset includes preprocessed EEG data (30 channels, 200 Hz sampling) and NIRS data with validated classification performance demonstrating enhanced discrimination of mental states through multimodal analysis compared to single-modality approaches.",
-  "methods_description": "EEG data were recorded at 1000 Hz using 30 active electrodes with a BrainAmp amplifier, referenced to linked mastoids, and downsampled to 200 Hz. NIRS data were collected at 12.5 Hz using NIRScout with 14 sources and 16 detectors (36 channels). Preprocessing included common average reference, bandpass filtering (0.5-50 Hz, Chebyshev type II, order 4), ICA-based EOG rejection, and artifact removal. Feature extraction employed Common Spatial Patterns (CSP) with log-variance features, classified using shrinkage Linear Discriminant Analysis with 10×5-fold cross-validation.",
-  "keywords": [
-    {
-      "term": "Brain-Computer Interfaces",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D062207"
-    },
-    {
-      "term": "Electroencephalography",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
-    },
-    {
-      "term": "Near-Infrared Spectroscopy"
-    },
-    {
-      "term": "motor imagery"
-    },
-    {
-      "term": "hybrid BCI"
-    },
-    {
-      "term": "mental arithmetic"
-    },
-    {
-      "term": "multimodal neuroimaging"
-    }
-  ],
-  "source_hash": "62037e5c8c96945a32569fa50211fee121e68f8cffa3a7f5717b8c90ea33c832"
+  "source_hash": "592ac6af30917f889ca2d03b8f977395ef0eb89db0725543064ef862bae3bf9e"
 }

@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "Shin et al. 2017 (Experiment A) — Open Access Dataset for EEG+NIRS Single-Trial Classification",
-  "description": "An open access hybrid brain-computer interface dataset combining electroencephalography (EEG) and near-infrared spectroscopy (NIRS) recordings from 29 healthy subjects performing motor imagery and mental arithmetic tasks. The dataset includes preprocessed EEG data (30 channels, 200 Hz sampling rate) and NIRS data across multiple sessions, with validated classification performance demonstrating enhanced discrimination of mental states through multimodal analysis compared to single modality approaches.",
-  "methods_description": "EEG data were recorded at 1000 Hz using 30 active electrodes with a BrainAmp amplifier, referenced to linked mastoids, and downsampled to 200 Hz. NIRS data were collected at 12.5 Hz using NIRScout with 14 sources and 16 detectors (36 channels). Preprocessing included common average reference, bandpass filtering (0.5-50 Hz, Chebyshev type II, order 4), ICA-based EOG rejection, and artifact removal. Feature extraction employed Common Spatial Patterns (CSP) with log-variance features, classified using Shrinkage LDA with 10×5-fold cross-validation. Motor imagery tasks involved kinesthetic hand gripping at 1 Hz pace cued by visual arrows.",
+  "description": "An open access hybrid brain-computer interface dataset combining electroencephalography (EEG) and near-infrared spectroscopy (NIRS) recordings from 29 healthy subjects performing motor imagery and mental arithmetic tasks. The dataset includes preprocessed EEG data (30 channels, 200 Hz sampling) and NIRS data with validated classification performance demonstrating enhanced discrimination of mental states through multimodal analysis compared to single modality approaches.",
+  "methods_description": "EEG data were recorded at 1000 Hz using 30 active electrodes with a BrainAmp amplifier, referenced to linked mastoids, and downsampled to 200 Hz. NIRS data were collected at 12.5 Hz using NIRScout with 14 sources and 16 detectors (36 channels). Preprocessing included common average reference, bandpass filtering (0.5-50 Hz, Chebyshev type II, order 4), ICA-based EOG rejection, and artifact removal. Feature extraction employed Common Spatial Patterns (CSP) with log-variance features, classified using Shrinkage LDA with 10x5-fold cross-validation.",
   "license": "GPL-3.0",
   "dataset_type": "derivative",
   "authors": {
@@ -27,10 +27,12 @@
       "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
     },
     {
-      "term": "motor imagery"
+      "term": "Near-Infrared Spectroscopy",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D019265"
     },
     {
-      "term": "near-infrared spectroscopy"
+      "term": "motor imagery"
     },
     {
       "term": "hybrid BCI"
@@ -40,6 +42,9 @@
     },
     {
       "term": "multimodal neuroimaging"
+    },
+    {
+      "term": "open access dataset"
     }
   ],
   "related_identifiers": [
@@ -81,9 +86,6 @@
       "award_title": "Brain Korea 21 PLUS Program"
     },
     {
-      "funder_name": "Korea University"
-    },
-    {
       "funder_name": "BMBF",
       "award_number": "01GQ0850",
       "award_title": "Bernstein Focus: Neurotechnology"
@@ -106,5 +108,5 @@
     ".yaml",
     ".yml"
   ],
-  "source_hash": "592ac6af30917f889ca2d03b8f977395ef0eb89db0725543064ef862bae3bf9e"
+  "source_hash": "e8a216a8576a5af5df0ef11a317bfe1c2db437d5175ae92466fcc8f776702ade"
 }

@@ -33,6 +33,17 @@ Acquisition
   Cap model: custom-made stretchy fabric cap
   Auxiliary channels: EOG (4 ch, horizontal, vertical), ecg, respiration
 
+fNIRS Acquisition
+-----------------
+  Added by code/shin2017_fnirs_to_bids.py from the upstream NIRS archive (http://doc.ml.tu-berlin.de/hBCI/NIRS/NIRS_01-29.zip).
+  Device: NIRScout (NIRx GmbH, Berlin, Germany), continuous wave, wavelengths 760 and 850 nm
+  Optodes: 14 sources and 16 detectors on the EEG cap (frontal, motor and visual areas), 36 source-detector channels (72 time series), nominal inter-optode distance 30 mm
+  Sampling rate: 10.0 Hz as distributed (the paper reports acquisition at 12.5 Hz)
+  Data: raw light intensities in volts, not processed, one SNIRF file per session in sub-*/ses-*/nirs/
+  Optode positions: nominal 10-10 cap positions from the BBCI montage file, scaled to a 0.095 m head radius; not digitised
+  Events: same trial order, trial_type and value as the EEG events of the same session. The fNIRS recording starts about 44 to 58 s before the EEG recording, so onsets are on the fNIRS clock; align the two recordings on their first event.
+  Source files: sourcedata/NIRS/subject NN/{cnt,mrk,mnt}.mat
+
 Participants
 ------------
   Number of subjects: 29
@@ -182,6 +193,14 @@ We provide an open access dataset for hybrid brain-computer interfaces (BCIs) us
 Methodology
 -----------
 Twenty-nine right-handed and one left-handed healthy subjects participated in motor imagery and mental arithmetic tasks. EEG data was recorded at 1000 Hz using 30 active electrodes with a BrainAmp amplifier, referenced to linked mastoids. NIRS data was collected at 12.5 Hz using NIRScout with 14 sources and 16 detectors resulting in 36 channels. Three sessions were conducted for each paradigm (MI and MA). Each session included 20 trials with 10s task periods and 15-17s rest periods. For MI, subjects performed kinesthetic hand gripping imagery at 1 Hz pace. Visual instructions included arrows for MI and arithmetic problems for MA. Motion artifacts from eye/head movements were also recorded. Signal processing included CSP for spatial filtering, log-variance features, and shrinkage LDA classifier with 10x5-fold cross-validation.
+
+NEMAR Submission Notes
+----------------------
+  Files: 29 subjects with 6 sessions each. Every session folder holds one EEG recording (eeg/*.bdf) and one fNIRS recording (nirs/*.snirf), 174 of each in the dataset. Both files are listed in the scans.tsv of the session.
+  Raw and processed: the EEG is the MOABB export of the upstream files at 200 Hz (see "Data preprocessed" above). The fNIRS is the light intensity of the upstream files, not processed (see "fNIRS Acquisition").
+  Dates: acq_time in scans.tsv and the measurement date of the SNIRF files are the placeholder 2017-01-01T00:00:00, the same for every recording. It is not the day of recording.
+  Participants: participants.tsv has 29 rows and gives no handedness per participant. The "Handedness" line above (29 right, 1 left) and the "Methodology" text come from the dataset metadata of MOABB and add up to 30, one more than the 29 participants of the dataset; this was not corrected here.
+  License: GNU General Public License, version 3. The full text is in the LICENSE file.
 
 References
 ----------
